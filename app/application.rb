@@ -40,4 +40,11 @@ class Application
       return "Couldn't find #{search_term}"
     end
   end
-end
+
+  def add_item(added_item)
+    if @@items.include?(added_item)
+      @@cart << added_item
+    else
+      return "We don't have that item"
+    end
+  end
